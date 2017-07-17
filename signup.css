@@ -2,9 +2,10 @@
 @import "font-awesome-ie7.min.css";
 /* Space out content a bit */
 body {
-  padding-top: 20px;
+  padding-top: 150px;
   padding-bottom: 20px;
-}
+/*  padding-left: 300px;
+*/}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -15,10 +16,10 @@ body {
 }
 
 /* Custom page header */
-.header {
+/*.header {
   border-bottom: 1px solid #e5e5e5;
 }
-/* Make the masthead heading the same height as the navigation */
+*//* Make the masthead heading the same height as the navigation */
 .header h3 {
   padding-bottom: 19px;
   margin-top: 0;
@@ -35,11 +36,11 @@ body {
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
+  .container1 {
     max-width: 730px;
   }
 }
-.container-narrow > hr {
+.container1-narrow > hr {
   margin: 30px 0;
 }
 
