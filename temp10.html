@@ -19,44 +19,62 @@
 <script src="js/jquery.easing.1.3.js"></script>
 <style type="text/css">
    /**/
+  .demo-content1{
+        padding: 15px;
+        font-size: 18px;
+        min-height: 300px;
+        background: #111;
+        margin-bottom: 10px;
+    }
+    .demo-content1.bg-alt{
+        background: #ffffff;
+    }
+
+/*
+
+overlay
+*/
+.container2 {
+
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #d3d3d3;
+}
+
+.container2:hover .overlay1 {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
 
 
-   .left {
-    float:left;
-}
-.rounded {
-    -webkit-border-radius:5px;
-    -moz-border-radius:5px;
-    border-radius:5px;
-}
-.wrap {
 
-
-    padding:5px 6px 6px 7px; /* readjust in jsfiddle*/
-    background:#f0f0f0;
-    border:1px solid #ccc;
-    overflow:hidden;
-}
-.search {
-    width:360px;
-    position:relative; top:2px; /* readujst in jsfiddle */
-    padding:8px 5px 8px 30px;
-    border:1px solid #ccc;
-    background:white url(http://i.imgur.com/lFkqn.png) left center no-repeat;
-}
-.go {
-    position:relative; top:0;
-    padding:3px 5px 2px;
-    margin-left:8px;
-    border:none;
-    background: -webkit-gradient(linear, left top, left bottom, from(#d631a7), to(#8f1b64));
-    background: -moz-linear-gradient(top,  #d631a7,  #8f1b64);
-}
-.go span {
-    display:block;
-    width:64px; height:28px;
-    background:url(http://i.imgur.com/mxxzQ.png) 0 0 no-repeat;
-}
     </style>
 </head>
 <body>
@@ -69,7 +87,7 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a>
   <a href="#" >Home</a>
   <a href="#" id="buy">Start Buying</a>
-  <a href="#" id="post">Post AD</a>
+  <a href="post.html" id="post">Post AD</a>
 
   <<!-- New Product icon by Icons8 -->
   
@@ -113,7 +131,7 @@
 								 </form>
 							</div>
 							<div class="bottom text-center">
-								New here ? <a href="#" id="Signup"><b>Join Us</b></a>
+								New here ? <a href="regsiter.html" id="Signup"><b>Join Us</b></a>
 
 
                   <!--Signup-->
@@ -150,7 +168,7 @@
            		<div class="demo-content bg-alt">
            	 <figure class="figure">
              
-            	<a href="">
+            	<a href=" car_cate.html">
 
            			<img src="kit.png" title="Kitchenwares" width="135" height="135">                
            		</a>
@@ -183,9 +201,10 @@
             <div class="col-md-4" style="padding-left:370px">
             	<div class="demo-content">
                <figure class="figure">
-             
-            			<img src="car.png"  width="135" height="135">
 
+             <a href="car_cate.html">
+            			<img src="car.png"  width="135" height="135">
+             </a>
                          <figcaption class="figcaption" style="color: red">Cars</figcaption>
                     </figure>             
          
@@ -267,7 +286,7 @@
 </div>
 
 <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
-                <div class="row" style="padding-left: 300px;">
+                <div class="row" style="padding-left: 325px;">
                     <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Products, Brands and more" name="">
                     <button class="flipkart-navbar-button col-xs-1">
                         <svg width="15px" height="15px">
@@ -284,56 +303,6 @@
 
 </div>
 
-<div id="con" style="display: none ;padding-left:300px;">
-   <div class="container1" >
-    <h1 class="well">Registration Form</h1>
-  <div class="row">
-        <form>
-          <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <label>First Name</label>
-                <input type="text" placeholder="Enter First Name Here.." class="form-control">
-              </div>
-              <div class="col-sm-6 form-group">
-                <label>Last Name</label>
-                <input type="text" placeholder="Enter Last Name Here.." class="form-control">
-              </div>
-            </div>          
-            <div class="form-group">
-              <label>Address</label>
-              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
-            </div>  
-            <div class="row">
-              <div class="col-sm-4 form-group">
-                <label>City</label>
-                <input type="text" placeholder="Enter City Name Here.." class="form-control">
-              </div>  
-              <div class="col-sm-4 form-group">
-                <label>State</label>
-                <input type="text" placeholder="Enter State Name Here.." class="form-control">
-              </div>  
-              <div class="col-sm-4 form-group">
-                <label>Zip</label>
-                <input type="text" placeholder="Enter Zip Code Here.." class="form-control">
-              </div>    
-            </div>
-            <div class="form-group">
-            <label>Phone Number</label>
-            <input type="text" placeholder="Enter Phone Number Here.." class="form-control">
-          </div>    
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="text" placeholder="Enter Email Address Here.." class="form-control">
-          </div>  
-          <button type="button" class="btn btn-lg btn-info">Submit</button>         
-          </div>
-        </form> 
-        </div>
-  
-  </div>
-
-</div>
 
 <div id="main" style="float: left; padding-right:300px; ">
 <div class="container">
@@ -342,11 +311,14 @@
             <div class="col-md-12" style="padding-left:320px;">
                   <div class="demo-content">
                                 
-                    <img src="buynsell3.jpg" title="New Product" width="600" height="300" >
+                    <img src="buynsell3.jpg"  width="600" height="300" >
                 
                 </div>  
                  </div>
             
+        
+
+
         </div>
 
         <div class="row" >
@@ -354,16 +326,16 @@
         <div class="col-md-6" style="padding-left:200px">
               <div class="demo-content bg-alt">
               <a href="">
-                <img src="img9.jpeg" title="Kitchenwares" width="200" height="200" style="opacity: 1">                
+                <img src="img9.jpeg"  width="200" height="200" style="opacity: 1">                
               </a>
               </div>
             
-                  </div>
+         </div>
             
             <div class="col-md-6" style="padding-left:280px">
               <div class="demo-content">
                 <a href="">
-                  <img src="img7.jpg" title="Jewelry" width="200" height="200">
+                  <img src="img7.jpg" width="200" height="200">
                 
                 </a>
                     </div>
@@ -371,41 +343,68 @@
         </div>
 
 </div>
+
+
+<hr>
 </div>
+  <!-- Open the output in a new blank tab (Click the arrow next to "Show Output" button) and resize the window to understand how the Bootstrap responsive grid system works. -->
+    <div class="container" style="width: 100%">
+        <!--Row with two equal columns-->
+        <p style="font-size: 25px"><b>
+          Published AD'S
 
-<div id="postad" style="display: none;">
-      <div class="container1" >
-    <h1 class="well">Description of Ad</h1>
-  <div class="row">
-        <form>
-          <div class="col-sm-6">
-            <div class="row">
-              <div class="col-sm-6 form-group">
-                <label>Product ID</label>
-                <input type="text" placeholder="Enter First Name Here.." class="form-control">
-              </div>
-              </div>
+        </b></p>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="demo-content1">
+                     <div class="row">
+                        <div class="col-sm-4">
+                            <div class="demo-content1 bg-alt">
+                              <div class="container2">
+                                
 
-              <div class="row">
-            
-              <div class="col-sm-6 form-group">
-                <label>Product Name</label>
-                <input type="text" placeholder="Enter Last Name Here.." class="form-control">
-              </div>
-              </div>
-            </div>          
-            <div class="form-group">
-              <label>Product Description</label>
-              <textarea placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
-            </div>  
-            
-  </div>
-
-</div>
+                                    <img src="bike1.jfif" title="Jewelry" width="350" height="260" >
+                                <div class="overlay1">
+                                <div class="text">
+                                  
+                                  <p>Honda RTR 180</p>
+                                  <p>Rs 80,000</p>
+                                  <p></p>
 
 
-</div>
-</div>
+                                  </div>
+                                  
+                                </div>
+                            </div>
+                              
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="demo-content1 bg-alt">
+                                       <a href="">
+                                    <img src="jewel1.jfif" title="Jewelry" width="350" height="260">
+                                  </a>
+                
+
+                            </div>
+                        </div>
+                         <div class="col-sm-4">
+                            <div class="demo-content1 bg-alt">
+                                     <a href="">
+                                    <img src="fur1.jpg" title="Jewelry" width="350" height="260">
+                                  </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
 
 			<footer>
 				
